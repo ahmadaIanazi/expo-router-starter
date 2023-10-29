@@ -46,14 +46,6 @@ const firebaseConfig = {
   messagingSenderId: process.env.EXPO_PUBLIC_FIREBASE_messagingSenderId,
   appId: process.env.EXPO_PUBLIC_FIREBASE_appId,
   measurementId: process.env.EXPO_PUBLIC_FIREBASE_measurementId,
-  
-  apiKey: 'AIzaSyD7ahq8Q3-p491LCaImwNW6IWv2co0gTMk',
-  authDomain: 'bookit-7ba1f.firebaseapp.com',
-  projectId: 'bookit-7ba1f',
-  storageBucket: 'bookit-7ba1f.appspot.com',
-  messagingSenderId: '630454194977',
-  appId: '1:630454194977:web:0273f14e5c8f26b4ee6460',
-  measurementId: 'G-WB21YP21WP',
 };
 
 */
