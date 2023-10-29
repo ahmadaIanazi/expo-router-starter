@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "expoTemplate",
+    "slug": "expoTemplate",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./xSetup/assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./xSetup/assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      // "supportsTablet": true,
+      // "requireFullScreen": true,
+      "supportsTablet": true
+      // "bundleIdentifier": "com.ahmadalanazi.bettagaexpo"
+      // "infoPlist": {
+      //   "NSLocationWhenInUseUsageDescription": "Bettaga uses the location to allow you to setup your store locations.",
+      //   "NSUserTrackingUsageDescription": "Bettaga will use tracking for analytics and App improvement purposes only. Data and tracking are not linked by user.",
+      //   "NSPhotoLibraryUsageDescription": "Bettaga accesses your photos to let you upload your brand logo to customize your digital card.",
+      //   "NSCalendarsUsageDescription": "This permission is not needed by the app, but it is required by an underlying API. If you see this dialog, contact us.",
+      //   "NSCameraUsageDescription": "Bettaga needs an access to your camera to allow you to SCAN Barcodes from your customer's Wallet passes. Allow if you like to SCAN Customers / Members Passes.",
+      //   "NSContactsUsageDescription": "This permission is not needed by the app, but it is required by an underlying API. If you see this dialog, contact us.",
+      //   "NSMicrophoneUsageDescription": "This permission is not needed by the app, but it is required by an underlying API. If you see this dialog, contact us.",
+      //   "NSMotionUsageDescription": "This permission is not needed by the app, but it is required by an underlying API. If you see this dialog, contact us.",
+      //   "NSPhotoLibraryAddUsageDescription": "This permission is not needed by the app, but it is required by an underlying API. If you see this dialog, contact us.",
+      //   "NSRemindersUsageDescription": "Bettaga accesses your photos to let you upload your brand logo to customize your digital card."
+      // }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./xSetup/assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      // "output": "static",
+      "favicon": "./xSetup/assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-localization",
+      "expo-build-properties",
+      "expo-tracking-transparency"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "tsconfigPaths": true
+    }
+  }
+}

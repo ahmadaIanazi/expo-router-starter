@@ -1,0 +1,1 @@
+export const SpaceMono = require('../assets/fonts/SpaceMono-Regular.ttf')
