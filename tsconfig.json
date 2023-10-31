@@ -20,8 +20,11 @@
       "@xSetup/*": ["./xSetup/*"],
       "@context/*": ["./xSetup/context/*"],
       "@constants/*": ["./xSetup/constants/*"],
+      "api/*": ["./xSetup/api/*"],
+      //
       "ui": ["./xSetup/ui/index"],
-      "api/*": ["./xSetup/api/*"]
+      "bottom": ["./xSetup/core/bottomSheet/useBottomStore"],
+      "bottoms/*": ["./xSetup/core/bottomSheet/*"],
     }
   },
   "include": [
