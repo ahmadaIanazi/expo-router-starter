@@ -1,6 +1,6 @@
 import { useAuthStore } from '@/stores/useAuthStore';
 import { useNavigationStore } from '@/stores/useNavigationStore';
-import { Slot, router, useSegments } from 'expo-router';
+import { Slot, Stack, router, useSegments } from 'expo-router';
 import React, { useEffect } from 'react';
 
 const DEVELOPMENT_ROUTE_OVERRIDE = '/(onboard)/Onboard'
@@ -29,5 +29,13 @@ export default function Initial(): React.JSX.Element {
     }
   }, [isSignedIn, isLoaded]);
 
-  return <Slot />;
+  // return <Slot />;
+  // TRY
+  return (
+    <Stack initialRouteName='index'>
+      <Stack.Screen name='index' />
+      // Introduce Screens
+      <Stack.Screen name='(modal)/AModal' options={{ presentation: 'modal' }} />
+    </Stack>
+  );
 }

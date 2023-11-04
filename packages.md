@@ -29,6 +29,13 @@
 - yarn add react-native-qrcode-svg
 - yarn add reanimated-color-picker
 
+- giftedchat
+- react-native-calendar
+- bouncy checkbox react-native-bouncy-checkbox
+- Skelton react-content-loader
+- Pager react-native-pager-view
+- Flashlist
+
 - npx expo install expo-image
 - npx expo install expo-screen-orientation
 - npx expo install @react-native-async-storage/async-storage

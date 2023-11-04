@@ -23,8 +23,6 @@
       "api/*": ["./xSetup/api/*"],
       //
       "ui": ["./xSetup/ui/index"],
-      "bottom": ["./xSetup/core/bottomSheet/useBottomStore"],
-      "bottoms/*": ["./xSetup/core/bottomSheet/*"],
     }
   },
   "include": [

@@ -9,7 +9,9 @@ import ImportsProvider from './ImportsProvider';
 import AnalyticsProvider from './AnalyticsProvider';
 import UpdateProvider from './UpdateProvider';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import BottomsProvider from 'bottoms/provider';
+import { BottomsProvider } from 'bottoms';
+import Layout from '@/app/(bottoms)';
+
 
 interface RootProviderProps {
   children: ReactNode;
@@ -28,7 +30,7 @@ export default function RootProvider({ children }: RootProviderProps): React.JSX
                   <AnalyticsProvider>
                     <ThemeProvider>
                       <SafeAreaProvider>
-                        <BottomsProvider>
+                        <BottomsProvider config={Layout}>
                           <>{children}</>
                         </BottomsProvider>
                       </SafeAreaProvider>

@@ -7,7 +7,10 @@ import Paragraph from "@/widgets/Paragraph";
 import Snackbar from "@/widgets/Snackbar";
 import { useState } from "react";
 
-import { bottom } from "bottom";
+import { bottom } from "bottoms";
+import { router } from "expo-router";
+
+import SomeComponent from "@/components/SomeComponent";
 
 export default function Home() {
 
@@ -24,7 +27,7 @@ export default function Home() {
   }
 
   const openModal = () => {
-    bottom.open('One');
+    bottom.open('Two');
   }
   const openModal2 = () => {
     bottom.open('Two');
@@ -32,9 +35,17 @@ export default function Home() {
 
   return (
     <Background>
-      <Logo />
-      <Header>Bottoms</Header>
-      <Paragraph>Bottom Sheet for React Native</Paragraph>
+      {/* <Logo /> */}
+      <Header>Home</Header>
+      <Paragraph>Expo Router Test</Paragraph>
+      <Paragraph> router.push('/(modal)/Modal') </Paragraph>
+      <Button mode='contained' onPress={() => router.push('/AModal')}>
+        To Modal
+      </Button>
+      <Paragraph>Navigate to Modal Directly </Paragraph>
+      <Paragraph> router.push('/(modal)/Modal') </Paragraph>
+      <SomeComponent />
+      {/* 
       <Button mode='contained' onPress={openModal}>
         Bottom Sheet One
       </Button>
@@ -44,7 +55,7 @@ export default function Home() {
       <Button style={{}} mode='outlined' onPress={logout}>
         Sign out
       </Button>
-      <Snackbar snackbarText={error} visible={error.length > 0} />
+      <Snackbar snackbarText={error} visible={error.length > 0} /> */}
     </Background>
   );
 }

@@ -6,7 +6,7 @@ export default function Splash() {
 
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Splash</Text>
+      <Text>Splash Loading</Text>
     </View>
   );
 }

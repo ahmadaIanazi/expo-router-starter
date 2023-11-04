@@ -1,10 +1,8 @@
 /** ========= TABS NAVIGATION ========= */
-import { StyleSheet, Text, View } from 'react-native';
+import { Stack, Tabs } from 'expo-router';
 import React from 'react';
-import { Tabs } from 'expo-router';
-import { Drawer } from 'expo-router/drawer';
 
-export default function Home_Layout() {
+export default function Tabs_Layout() {
   return (
     <Tabs>
       <Tabs.Screen name='Home' />
@@ -35,7 +33,6 @@ export default function Home_Layout() {
   )
 }
  ========= END */
-
 
 /** ========= DRAWER NAVIGATION ========= */
 /**
