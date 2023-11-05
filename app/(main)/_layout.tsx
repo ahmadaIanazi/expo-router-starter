@@ -1,13 +1,44 @@
 /** ========= TABS NAVIGATION ========= */
 import { Stack, Tabs } from 'expo-router';
 import React from 'react';
+import { BlurView } from 'expo-blur';
+import { StyleSheet } from 'react-native';
+import { Icon, useTheme } from 'react-native-paper';
 
 export default function Tabs_Layout() {
+  const colors = useTheme()
+
+  const mode = colors.mode
   return (
-    <Tabs screenOptions={{headerShown: false }}>
-      <Tabs.Screen name='Home' />
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+
+        tabBarActiveTintColor: colors.colors.primary,
+        tabBarInactiveTintColor: colors.colors.secondary,
+        tabBarShowLabel: true,
+        tabBarStyle: [
+          {
+            position: 'absolute',
+            elevation: 0,
+            borderRadius: 20,
+            height: 60,
+          },
+        ],
+        // tabBarBackground: () => (
+        //   <BlurView tint={mode} intensity={100} style={StyleSheet.absoluteFill} />
+        // ),
+      }}
+    >
+      <Tabs.Screen
+        name='Home'
+        options={{
+          tabBarIcon: ({ color, focused }) => <Icon source='heart' size={focused ? 32 : 24} color={color} />,
+        }}
+      />
       <Tabs.Screen name='List' />
-      <Tabs.Screen name='post' options={{href: null}} />
+      <Tabs.Screen name='Tiktok' />
+      <Tabs.Screen name='post' options={{ href: null }} />
     </Tabs>
   );
 }

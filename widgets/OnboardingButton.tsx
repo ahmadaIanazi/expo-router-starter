@@ -44,7 +44,7 @@ export default function OnboardingButton({ loading, handleOnPress, lastSlide }) 
         },
       ]}
     >
-      <Text variant='bodySmall'>{buttonText}</Text>
+      <Text variant='headlineLarge' style={{fontWeight:'bold'}}>{buttonText}</Text>
     </TouchableHighlight>
   );
 };

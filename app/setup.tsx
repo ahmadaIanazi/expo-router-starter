@@ -17,8 +17,9 @@ export default function Setup(): React.JSX.Element {
       <Stack.Screen name='(auth)/Reset' options={{ animation: 'none' }} />
       <Stack.Screen name='(auth)/Register' options={{ animation: 'none' }} />
       <Stack.Screen name='(auth)/Welcome' options={{ animation: 'fade_from_bottom' }} />
-      {/* === Introduce Screens === */}
+      {/* === Modals Screens === */}
       <Stack.Screen name='(modals)/AModal' options={{ presentation: 'modal' }} />
+      <Stack.Screen name='(modals)/Settings' options={{ presentation: 'modal' }} />
     </Stack>
   );
 }

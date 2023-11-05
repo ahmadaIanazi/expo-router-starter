@@ -46,7 +46,7 @@ export default function Register() {
   const toggleSecureText = () => setSecureText(!secureText);
 
   return (
-    <Background>
+    <Background keyboard>
       <BackButton />
       <Logo />
       <Text variant='headlineLarge'>Register</Text>

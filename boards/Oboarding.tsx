@@ -1,20 +1,20 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
-import { Dimensions, FlatList, StyleSheet, View } from 'react-native';
 import { onboardBones, onboardBonesAR } from '@constants/onboard_setup';
+import React, { useContext, useEffect, useRef, useState } from 'react';
+import { Dimensions, FlatList, StyleSheet, TouchableOpacity, View } from 'react-native';
 import OnboardingButton from '../widgets/OnboardingButton';
 
+import LOCALIZATION from '@/xSetup/context/locales';
+import { router } from 'expo-router';
+import { useTheme } from 'react-native-paper';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import OnboardSlider from '../widgets/OnboardSlider';
-import SliderIndicator from '../widgets/SliderIndicator';
 import { useNavigationStore } from '../stores/useNavigationStore';
 import { useRemoteStore } from '../stores/useRemoteStore';
-import LOCALIZATION from '@/xSetup/context/locales';
-import { useTheme } from 'react-native-paper';
-import { router } from 'expo-router';
+import OnboardSlider from '../widgets/OnboardSlider';
+import SliderIndicator from '../widgets/SliderIndicator';
 
 export default function Onboarding  () {
   const colors = useTheme();
-  const l = useContext(LOCALIZATION)
+  const l = useContext(LOCALIZATION);
   const { shared } = useRemoteStore();
   const setSeenOnboard = useNavigationStore((state) => state.setSeenOnboard);
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -37,13 +37,13 @@ export default function Onboarding  () {
 
   useEffect(() => {
     if (SKIP) {
-      console.log('SKIP')
+      console.log('SKIP');
       setSeenOnboard(true);
       setLoading(true);
-      router.replace('/Welcome')
+      router.replace('/Welcome');
     }
-  }, [SKIP])
-  
+  }, [SKIP]);
+
   const handleOnPress = () => {
     if (currentSlideIndex == data?.length - 1) {
       setSeenOnboard(true);
@@ -66,6 +66,13 @@ export default function Onboarding  () {
     setCurrentSlideIndex(nextSlideIndex);
   };
 
+  // Function to navigate to a specific card
+  const navigateToCard = (index) => {
+   const nextSlideOffset = index * width;
+   slidesRef?.current?.scrollToOffset({ offset: nextSlideOffset });
+   setCurrentSlideIndex(index);
+  };
+
   const RENDEROnboardSlider = ({ item }) => <OnboardSlider item={item} />;
 
   return (
@@ -84,14 +91,12 @@ export default function Onboarding  () {
       </View>
       <View style={styles.indicators}>
         {data?.map((_, index) => (
+          <TouchableOpacity key={index} onPress={()=> navigateToCard(index)}>
           <SliderIndicator currentSlideIndex={currentSlideIndex} key={index} index={index} />
+          </TouchableOpacity>
         ))}
       </View>
-      <OnboardingButton
-        loading={loading}
-        lastSlide={lastSlide}
-        handleOnPress={handleOnPress}
-      />
+      <OnboardingButton loading={loading} lastSlide={lastSlide} handleOnPress={handleOnPress} />
     </SafeAreaView>
   );
 };

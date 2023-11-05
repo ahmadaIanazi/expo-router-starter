@@ -174,8 +174,28 @@ export default function executeAuth() {
   const executeResetPassword = async (email: string): Promise<void> => {
     try {
       await sendPasswordResetEmail(auth, email);
-    } catch (err) {
-      throw err;
+      router.push('/Login');
+    } catch (error: any) {
+        switch (error.code) {
+          case 'auth/email-already-in-use':
+            //  vexoit('AUTH', { method: 'signup', status: 'failed', event: 'email-already-in-use' });
+            throw l.error_email_in_use;
+          case 'auth/wrong-password':
+            //  vexoit('AUTH', { method: 'login', status: 'failed', event: 'auth/wrong-password' });
+            throw l.error_password_wrong;
+          case 'auth/too-many-requests':
+            //  vexoit('AUTH', { method: 'signup', status: 'failed', event: 'too-many-requests' });
+            throw l.error_account_locked;
+          case 'auth/invalid-email':
+            //  vexoit('AUTH', { method: 'login', status: 'failed', event: 'invalid-email' });
+            throw l.error_email_invalid;
+          case 'auth/weak-password':
+            //  vexoit('AUTH', { method: 'signup', status: 'failed', event: 'weak-password' });
+            throw l.error_password_too_weak;
+          default:
+            //  vexoit('AUTH', { method: 'signup', status: 'failed', event: 'error' });
+            throw l.error_occurred;
+        }
     }
   };
 

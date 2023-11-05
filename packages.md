@@ -1,6 +1,6 @@
 # Expo Project
 
-- npx expo install axios zustand moment react-native-paper react-native-tab-view @tanstack/react-query @gorhom/bottom-sheet@^4 google-libphonenumber react-native-webview react-native-circular-progress-indicator throttle-debounce geofire victory-native react-native-qrcode-svg reanimated-color-picker expo-screen-orientation @react-native-async-storage/async-storage @react-native-masked-view/masked-view react-native-pager-view firebase expo-file-system expo-image-picker expo-random expo-updates expo-localization expo-device expo-location expo-task-manager react-native-maps expo-notifications expo-permissions expo-linear-gradient expo-barcode-scanner expo-constants react-native-svg react-native-reanimated expo-sms expo-sharing expo-clipboard expo-blur expo-store-review expo-linking expo-av expo-system-ui react-native-purchases expo-dev-client expo-build-properties vexo-analytics expo-tracking-transparency @shopify/react-native-skia @react-navigation/native expo-image @react-navigation/material-top-tabs @react-navigation/drawer react-native-safe-area-context @react-native-community/datetimepicker @th3rdwave/react-navigation-bottom-sheet
+- npx expo install axios zustand moment react-native-paper react-native-tab-view @tanstack/react-query @gorhom/bottom-sheet@^4 google-libphonenumber react-native-webview react-native-circular-progress-indicator throttle-debounce geofire victory-native react-native-qrcode-svg reanimated-color-picker expo-screen-orientation @react-native-async-storage/async-storage @react-native-masked-view/masked-view react-native-pager-view firebase expo-file-system expo-image-picker expo-random expo-updates expo-localization expo-device expo-location expo-task-manager react-native-maps expo-notifications expo-permissions expo-linear-gradient expo-barcode-scanner expo-constants react-native-svg react-native-reanimated expo-sms expo-sharing expo-clipboard expo-blur expo-store-review expo-linking expo-av expo-system-ui react-native-purchases expo-dev-client expo-build-properties vexo-analytics expo-tracking-transparency @shopify/react-native-skia @react-navigation/native expo-image @react-navigation/material-top-tabs @react-navigation/drawer react-native-safe-area-context @react-native-community/datetimepicker bottoms @shopify/flash-list react-native-easy-content-loader
 
 - npx expo install --fix
 
@@ -32,10 +32,13 @@
 - giftedchat
 - react-native-calendar
 - bouncy checkbox react-native-bouncy-checkbox
-- Skelton react-content-loader
 - Pager react-native-pager-view
 - Flashlist
 
+- npx expo install bottoms
+- npx expo install react-native-easy-content-loader
+- npx expo install @shopify/flash-list
+- npx expo install react-native-pager-view
 - npx expo install expo-image
 - npx expo install expo-screen-orientation
 - npx expo install @react-native-async-storage/async-storage

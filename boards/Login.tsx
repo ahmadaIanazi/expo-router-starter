@@ -51,7 +51,7 @@ export default function Login(): React.JSX.Element {
   const toggleSecureText = () => setSecureText(!secureText);
 
   return (
-    <Background>
+    <Background keyboard>
       <BackButton />
       <Logo />
       <Header>Login.</Header>

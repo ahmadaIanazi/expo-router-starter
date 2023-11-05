@@ -12,6 +12,10 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "updates": {
+      "fallbackToCacheTimeout": 10000,
+      // "url": "https://u.expo.dev/f4b56fb1-b6cc-4fb3-aeb8-2443be51c4dc"
+    },
     "assetBundlePatterns": ["**/*"],
     "ios": {
       // "supportsTablet": true,
