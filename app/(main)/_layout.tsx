@@ -4,9 +4,10 @@ import React from 'react';
 
 export default function Tabs_Layout() {
   return (
-    <Tabs>
+    <Tabs screenOptions={{headerShown: false }}>
       <Tabs.Screen name='Home' />
       <Tabs.Screen name='List' />
+      <Tabs.Screen name='post' options={{href: null}} />
     </Tabs>
   );
 }
