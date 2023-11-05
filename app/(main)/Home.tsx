@@ -32,6 +32,9 @@ export default function Home() {
   const openModal2 = () => {
     bottom.open('Two');
   }
+  const data = {
+    '1':'293'
+  }
 
   return (
     <Background>
@@ -39,7 +42,9 @@ export default function Home() {
       <Header>Home</Header>
       <Paragraph>Expo Router Test</Paragraph>
       <Paragraph> router.push('/(modal)/Modal') </Paragraph>
-      <Button mode='contained' onPress={() => router.push('/AModal')}>
+      <Button mode='contained' onPress={() => {
+        router.setParams(data)
+        router.push(`/(main)/post/id`)}}>
         To Modal
       </Button>
       <Paragraph>Navigate to Modal Directly </Paragraph>

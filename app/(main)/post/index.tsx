@@ -6,7 +6,7 @@ export default function Post() {
   return (
     <View>
       <Text>Post</Text>
-      <Link  href='/post/2'>Open Post 2</Link>
+      <Link  href='/post/2'>Open Post</Link>
     </View>
   )
 }

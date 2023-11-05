@@ -3,13 +3,12 @@ import React from 'react'
 import { useLocalSearchParams } from 'expo-router'
 
 export default function PostDetails() {
-    const { id } = useLocalSearchParams()
+  const id = useLocalSearchParams()
 
+  console.log('ID:', id)
   return (
     <View>
-      <Text>PostDetails: {id}</Text>
+      <Text>PostDetails:</Text>
     </View>
   )
 }
-
-const styles = StyleSheet.create({})
