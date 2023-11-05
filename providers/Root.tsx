@@ -30,9 +30,9 @@ export default function RootProvider({ children }: RootProviderProps): React.JSX
                   <AnalyticsProvider>
                     <ThemeProvider>
                       <SafeAreaProvider>
-                        {/* <BottomsProvider config={Layout}> */}
+                        <BottomsProvider config={Layout}>
                           <>{children}</>
-                        {/* </BottomsProvider> */}
+                        </BottomsProvider>
                       </SafeAreaProvider>
                     </ThemeProvider>
                   </AnalyticsProvider>
